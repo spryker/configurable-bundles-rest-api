@@ -5,3 +5,6 @@ parameters:
         - '#Parameter \#1 \$configurableBundleTemplateStorageTransfer of method .+ConfigurableBundleTemplateRestResourceBuilderInterface::buildConfigurableBundleTemplateRestResource\(\) expects .+ConfigurableBundleTemplateStorageTransfer, .+ConfigurableBundleTemplateStorageTransfer\|false given.#'
         -
             identifier: missingType.iterableValue
+        # Glue framework annotation parsing
+        -
+            identifier: phpDoc.parseError
