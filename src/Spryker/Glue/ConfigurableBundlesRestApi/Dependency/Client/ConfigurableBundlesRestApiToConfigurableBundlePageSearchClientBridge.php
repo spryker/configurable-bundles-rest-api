@@ -24,11 +24,6 @@ class ConfigurableBundlesRestApiToConfigurableBundlePageSearchClientBridge imple
         $this->configurableBundlePageSearchClient = $configurableBundlePageSearchClient;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ConfigurableBundleTemplatePageSearchRequestTransfer $configurableBundleTemplatePageSearchRequestTransfer
-     *
-     * @return array
-     */
     public function searchConfigurableBundleTemplates(
         ConfigurableBundleTemplatePageSearchRequestTransfer $configurableBundleTemplatePageSearchRequestTransfer
     ): array {

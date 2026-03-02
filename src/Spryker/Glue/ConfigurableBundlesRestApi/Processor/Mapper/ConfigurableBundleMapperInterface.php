@@ -12,12 +12,6 @@ use Generated\Shared\Transfer\RestConfigurableBundleTemplateImageSetsAttributesT
 
 interface ConfigurableBundleMapperInterface
 {
-    /**
-     * @param \Generated\Shared\Transfer\ProductImageSetStorageTransfer $productImageSetStorageTransfer
-     * @param \Generated\Shared\Transfer\RestConfigurableBundleTemplateImageSetsAttributesTransfer $restConfigurableBundleTemplateImageSetsAttributesTransfer
-     *
-     * @return \Generated\Shared\Transfer\RestConfigurableBundleTemplateImageSetsAttributesTransfer
-     */
     public function mapProductImageSetStorageTransferToRestAttributesTransfer(
         ProductImageSetStorageTransfer $productImageSetStorageTransfer,
         RestConfigurableBundleTemplateImageSetsAttributesTransfer $restConfigurableBundleTemplateImageSetsAttributesTransfer

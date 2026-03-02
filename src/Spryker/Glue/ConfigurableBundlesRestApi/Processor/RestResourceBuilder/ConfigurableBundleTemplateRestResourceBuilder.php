@@ -20,19 +20,11 @@ class ConfigurableBundleTemplateRestResourceBuilder implements ConfigurableBundl
      */
     protected $restResourceBuilder;
 
-    /**
-     * @param \Spryker\Glue\GlueApplication\Rest\JsonApi\RestResourceBuilderInterface $restResourceBuilder
-     */
     public function __construct(RestResourceBuilderInterface $restResourceBuilder)
     {
         $this->restResourceBuilder = $restResourceBuilder;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ConfigurableBundleTemplateStorageTransfer $configurableBundleTemplateStorageTransfer
-     *
-     * @return \Spryker\Glue\GlueApplication\Rest\JsonApi\RestResourceInterface
-     */
     public function buildConfigurableBundleTemplateRestResource(
         ConfigurableBundleTemplateStorageTransfer $configurableBundleTemplateStorageTransfer
     ): RestResourceInterface {

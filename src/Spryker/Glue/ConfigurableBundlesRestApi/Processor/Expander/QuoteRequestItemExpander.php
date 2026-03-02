@@ -23,9 +23,6 @@ class QuoteRequestItemExpander implements QuoteRequestItemExpanderInterface
      */
     protected $glossaryStorageClient;
 
-    /**
-     * @param \Spryker\Glue\ConfigurableBundlesRestApi\Dependency\Client\ConfigurableBundlesRestApiToGlossaryStorageClientInterface $glossaryStorageClient
-     */
     public function __construct(ConfigurableBundlesRestApiToGlossaryStorageClientInterface $glossaryStorageClient)
     {
         $this->glossaryStorageClient = $glossaryStorageClient;
@@ -103,12 +100,6 @@ class QuoteRequestItemExpander implements QuoteRequestItemExpanderInterface
             && $itemTransfer->getConfiguredBundleItem();
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\QuoteRequestTransfer $quoteRequestTransfer
-     * @param \Generated\Shared\Transfer\RestQuoteRequestsAttributesTransfer $restQuoteRequestsAttributesTransfer
-     *
-     * @return bool
-     */
     protected function areTransfersValid(
         QuoteRequestTransfer $quoteRequestTransfer,
         RestQuoteRequestsAttributesTransfer $restQuoteRequestsAttributesTransfer
@@ -118,11 +109,6 @@ class QuoteRequestItemExpander implements QuoteRequestItemExpanderInterface
             && $this->isRestQuoteRequestsAttributesTransferValid($restQuoteRequestsAttributesTransfer);
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\RestQuoteRequestsAttributesTransfer $restQuoteRequestsAttributesTransfer
-     *
-     * @return bool
-     */
     protected function isRestQuoteRequestsAttributesTransferValid(RestQuoteRequestsAttributesTransfer $restQuoteRequestsAttributesTransfer): bool
     {
         return $restQuoteRequestsAttributesTransfer->getShownVersion() !== null
@@ -208,12 +194,6 @@ class QuoteRequestItemExpander implements QuoteRequestItemExpanderInterface
         return $indexedRestQuoteRequestsAttributesTransfers;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\RestQuoteRequestsAttributesTransfer $restQuoteRequestsAttributesTransfer
-     * @param \Generated\Shared\Transfer\QuoteRequestTransfer $quoteRequestTransfer
-     *
-     * @return \Generated\Shared\Transfer\RestQuoteRequestsAttributesTransfer
-     */
     protected function expandRestQuoteRequestsAttributesTransfer(
         RestQuoteRequestsAttributesTransfer $restQuoteRequestsAttributesTransfer,
         QuoteRequestTransfer $quoteRequestTransfer

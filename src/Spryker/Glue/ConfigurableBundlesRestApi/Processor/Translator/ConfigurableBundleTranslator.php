@@ -16,9 +16,6 @@ class ConfigurableBundleTranslator implements ConfigurableBundleTranslatorInterf
      */
     protected $glossaryStorageClient;
 
-    /**
-     * @param \Spryker\Glue\ConfigurableBundlesRestApi\Dependency\Client\ConfigurableBundlesRestApiToGlossaryStorageClientInterface $glossaryStorageClient
-     */
     public function __construct(ConfigurableBundlesRestApiToGlossaryStorageClientInterface $glossaryStorageClient)
     {
         $this->glossaryStorageClient = $glossaryStorageClient;

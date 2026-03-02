@@ -18,9 +18,6 @@ class ConfigurableBundleTemplateImageSetExpander implements ConfigurableBundleRe
      */
     protected $configurableBundleTemplateImageSetRestResourceBuilder;
 
-    /**
-     * @param \Spryker\Glue\ConfigurableBundlesRestApi\Processor\RestResourceBuilder\ConfigurableBundleTemplateImageSetRestResourceBuilderInterface $configurableBundleTemplateImageSetRestResourceBuilder
-     */
     public function __construct(
         ConfigurableBundleTemplateImageSetRestResourceBuilderInterface $configurableBundleTemplateImageSetRestResourceBuilder
     ) {

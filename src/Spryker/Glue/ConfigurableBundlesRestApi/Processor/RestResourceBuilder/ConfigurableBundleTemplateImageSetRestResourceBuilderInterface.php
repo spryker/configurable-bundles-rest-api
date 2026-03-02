@@ -12,12 +12,6 @@ use Spryker\Glue\GlueApplication\Rest\JsonApi\RestResourceInterface;
 
 interface ConfigurableBundleTemplateImageSetRestResourceBuilderInterface
 {
-    /**
-     * @param \Generated\Shared\Transfer\ProductImageSetStorageTransfer $productImageSetStorageTransfer
-     * @param string $idParentResource
-     *
-     * @return \Spryker\Glue\GlueApplication\Rest\JsonApi\RestResourceInterface
-     */
     public function buildConfigurableBundleTemplateImageSetRestResource(
         ProductImageSetStorageTransfer $productImageSetStorageTransfer,
         string $idParentResource

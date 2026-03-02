@@ -12,22 +12,10 @@ use Spryker\Glue\GlueApplication\Rest\JsonApi\RestResponseInterface;
 
 interface ConfigurableBundleTemplateRestResponseBuilderInterface
 {
-    /**
-     * @return \Spryker\Glue\GlueApplication\Rest\JsonApi\RestResponseInterface
-     */
     public function createRestResponse(): RestResponseInterface;
 
-    /**
-     * @return \Spryker\Glue\GlueApplication\Rest\JsonApi\RestResponseInterface
-     */
     public function buildConfigurableBundleTemplateNotFoundErrorRestResponse(): RestResponseInterface;
 
-    /**
-     * @param \Generated\Shared\Transfer\ConfigurableBundleTemplateStorageTransfer $configurableBundleTemplateStorageTransfer
-     * @param string $localeName
-     *
-     * @return \Spryker\Glue\GlueApplication\Rest\JsonApi\RestResponseInterface
-     */
     public function buildConfigurableBundleTemplateRestResponse(
         ConfigurableBundleTemplateStorageTransfer $configurableBundleTemplateStorageTransfer,
         string $localeName

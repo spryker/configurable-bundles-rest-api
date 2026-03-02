@@ -14,12 +14,6 @@ use Generated\Shared\Transfer\RestSalesOrderConfiguredBundleTransfer;
 
 class OrderItemMapper implements OrderItemMapperInterface
 {
-    /**
-     * @param \Generated\Shared\Transfer\ItemTransfer $itemTransfer
-     * @param \Generated\Shared\Transfer\RestOrderItemsAttributesTransfer $restOrderItemsAttributesTransfer
-     *
-     * @return \Generated\Shared\Transfer\RestOrderItemsAttributesTransfer
-     */
     public function mapItemTransferToRestOrderItemsAttributesTransfer(
         ItemTransfer $itemTransfer,
         RestOrderItemsAttributesTransfer $restOrderItemsAttributesTransfer
@@ -43,12 +37,6 @@ class OrderItemMapper implements OrderItemMapperInterface
         return $restOrderItemsAttributesTransfer;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ItemTransfer $itemTransfer
-     * @param \Generated\Shared\Transfer\RestSalesOrderConfiguredBundleTransfer $restSalesOrderConfiguredBundleTransfer
-     *
-     * @return \Generated\Shared\Transfer\RestSalesOrderConfiguredBundleTransfer
-     */
     protected function copyTranslatedTemplateName(
         ItemTransfer $itemTransfer,
         RestSalesOrderConfiguredBundleTransfer $restSalesOrderConfiguredBundleTransfer

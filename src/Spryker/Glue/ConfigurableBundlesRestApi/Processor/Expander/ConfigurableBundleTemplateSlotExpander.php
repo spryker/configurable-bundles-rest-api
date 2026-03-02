@@ -18,9 +18,6 @@ class ConfigurableBundleTemplateSlotExpander implements ConfigurableBundleRestRe
      */
     protected $configurableBundleSlotRestResourceBuilder;
 
-    /**
-     * @param \Spryker\Glue\ConfigurableBundlesRestApi\Processor\RestResourceBuilder\ConfigurableBundleTemplateSlotRestResourceBuilderInterface $configurableBundleSlotRestResourceBuilder
-     */
     public function __construct(
         ConfigurableBundleTemplateSlotRestResourceBuilderInterface $configurableBundleSlotRestResourceBuilder
     ) {

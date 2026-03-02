@@ -27,10 +27,6 @@ class ConfigurableBundleTemplateImageSetRestResourceBuilder implements Configura
      */
     protected $configurableBundleMapper;
 
-    /**
-     * @param \Spryker\Glue\GlueApplication\Rest\JsonApi\RestResourceBuilderInterface $restResourceBuilder
-     * @param \Spryker\Glue\ConfigurableBundlesRestApi\Processor\Mapper\ConfigurableBundleMapperInterface $configurableBundleMapper
-     */
     public function __construct(
         RestResourceBuilderInterface $restResourceBuilder,
         ConfigurableBundleMapperInterface $configurableBundleMapper
@@ -39,12 +35,6 @@ class ConfigurableBundleTemplateImageSetRestResourceBuilder implements Configura
         $this->configurableBundleMapper = $configurableBundleMapper;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ProductImageSetStorageTransfer $productImageSetStorageTransfer
-     * @param string $idParentResource
-     *
-     * @return \Spryker\Glue\GlueApplication\Rest\JsonApi\RestResourceInterface
-     */
     public function buildConfigurableBundleTemplateImageSetRestResource(
         ProductImageSetStorageTransfer $productImageSetStorageTransfer,
         string $idParentResource
@@ -69,11 +59,6 @@ class ConfigurableBundleTemplateImageSetRestResourceBuilder implements Configura
         return $configurableBundleTemplateImageSetRestResource;
     }
 
-    /**
-     * @param string $idParentResource
-     *
-     * @return string
-     */
     protected function createConfigurableBundleTemplateImageSetSelfLink(string $idParentResource): string
     {
         return sprintf(

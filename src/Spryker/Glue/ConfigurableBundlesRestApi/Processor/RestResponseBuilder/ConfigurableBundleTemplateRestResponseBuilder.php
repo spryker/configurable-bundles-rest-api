@@ -33,11 +33,6 @@ class ConfigurableBundleTemplateRestResponseBuilder implements ConfigurableBundl
      */
     protected $configurableBundleTranslator;
 
-    /**
-     * @param \Spryker\Glue\GlueApplication\Rest\JsonApi\RestResourceBuilderInterface $restResourceBuilder
-     * @param \Spryker\Glue\ConfigurableBundlesRestApi\Processor\RestResourceBuilder\ConfigurableBundleTemplateRestResourceBuilderInterface $configurableBundleTemplateRestResourceBuilder
-     * @param \Spryker\Glue\ConfigurableBundlesRestApi\Processor\Translator\ConfigurableBundleTranslatorInterface $configurableBundleTranslator
-     */
     public function __construct(
         RestResourceBuilderInterface $restResourceBuilder,
         ConfigurableBundleTemplateRestResourceBuilderInterface $configurableBundleTemplateRestResourceBuilder,
@@ -48,17 +43,11 @@ class ConfigurableBundleTemplateRestResponseBuilder implements ConfigurableBundl
         $this->configurableBundleTranslator = $configurableBundleTranslator;
     }
 
-    /**
-     * @return \Spryker\Glue\GlueApplication\Rest\JsonApi\RestResponseInterface
-     */
     public function createRestResponse(): RestResponseInterface
     {
         return $this->restResourceBuilder->createRestResponse();
     }
 
-    /**
-     * @return \Spryker\Glue\GlueApplication\Rest\JsonApi\RestResponseInterface
-     */
     public function buildConfigurableBundleTemplateNotFoundErrorRestResponse(): RestResponseInterface
     {
         $restErrorMessageTransfer = (new RestErrorMessageTransfer())
@@ -69,12 +58,6 @@ class ConfigurableBundleTemplateRestResponseBuilder implements ConfigurableBundl
         return $this->createRestResponse()->addError($restErrorMessageTransfer);
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ConfigurableBundleTemplateStorageTransfer $configurableBundleTemplateStorageTransfer
-     * @param string $localeName
-     *
-     * @return \Spryker\Glue\GlueApplication\Rest\JsonApi\RestResponseInterface
-     */
     public function buildConfigurableBundleTemplateRestResponse(
         ConfigurableBundleTemplateStorageTransfer $configurableBundleTemplateStorageTransfer,
         string $localeName

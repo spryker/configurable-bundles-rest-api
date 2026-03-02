@@ -33,11 +33,6 @@ class ConfigurableBundlesRestApiDependencyProvider extends AbstractBundleDepende
      */
     public const CLIENT_GLOSSARY_STORAGE = 'CLIENT_GLOSSARY_STORAGE';
 
-    /**
-     * @param \Spryker\Glue\Kernel\Container $container
-     *
-     * @return \Spryker\Glue\Kernel\Container
-     */
     public function provideDependencies(Container $container): Container
     {
         $container = parent::provideDependencies($container);
@@ -48,11 +43,6 @@ class ConfigurableBundlesRestApiDependencyProvider extends AbstractBundleDepende
         return $container;
     }
 
-    /**
-     * @param \Spryker\Glue\Kernel\Container $container
-     *
-     * @return \Spryker\Glue\Kernel\Container
-     */
     protected function addConfigurableBundleStorageClient(Container $container): Container
     {
         $container->set(static::CLIENT_CONFIGURABLE_BUNDLE_STORAGE, function (Container $container) {
@@ -64,11 +54,6 @@ class ConfigurableBundlesRestApiDependencyProvider extends AbstractBundleDepende
         return $container;
     }
 
-    /**
-     * @param \Spryker\Glue\Kernel\Container $container
-     *
-     * @return \Spryker\Glue\Kernel\Container
-     */
     protected function addConfigurableBundlePageSearchClient(Container $container): Container
     {
         $container->set(static::CLIENT_CONFIGURABLE_BUNDLE_PAGE_SEARCH, function (Container $container) {
@@ -80,11 +65,6 @@ class ConfigurableBundlesRestApiDependencyProvider extends AbstractBundleDepende
         return $container;
     }
 
-    /**
-     * @param \Spryker\Glue\Kernel\Container $container
-     *
-     * @return \Spryker\Glue\Kernel\Container
-     */
     protected function addGlossaryStorageClient(Container $container): Container
     {
         $container->set(static::CLIENT_GLOSSARY_STORAGE, function (Container $container) {

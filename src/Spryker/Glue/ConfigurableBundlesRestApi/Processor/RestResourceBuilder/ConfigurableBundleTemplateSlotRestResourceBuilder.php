@@ -21,20 +21,11 @@ class ConfigurableBundleTemplateSlotRestResourceBuilder implements ConfigurableB
      */
     protected $restResourceBuilder;
 
-    /**
-     * @param \Spryker\Glue\GlueApplication\Rest\JsonApi\RestResourceBuilderInterface $restResourceBuilder
-     */
     public function __construct(RestResourceBuilderInterface $restResourceBuilder)
     {
         $this->restResourceBuilder = $restResourceBuilder;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ConfigurableBundleTemplateSlotStorageTransfer $configurableBundleTemplateSlotStorageTransfer
-     * @param string $idParentResource
-     *
-     * @return \Spryker\Glue\GlueApplication\Rest\JsonApi\RestResourceInterface
-     */
     public function buildConfigurableBundleTemplateSlotRestResource(
         ConfigurableBundleTemplateSlotStorageTransfer $configurableBundleTemplateSlotStorageTransfer,
         string $idParentResource
@@ -57,11 +48,6 @@ class ConfigurableBundleTemplateSlotRestResourceBuilder implements ConfigurableB
         return $configurableBundleTemplateSlotRestResource;
     }
 
-    /**
-     * @param string $idParentResource
-     *
-     * @return string
-     */
     protected function createConfigurableBundleTemplateSlotSelfLink(string $idParentResource): string
     {
         return sprintf(

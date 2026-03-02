@@ -39,11 +39,6 @@ class ConfigurableBundleTemplateReader implements ConfigurableBundleTemplateRead
      */
     protected $configurableBundleTemplateRestResponseBuilder;
 
-    /**
-     * @param \Spryker\Glue\ConfigurableBundlesRestApi\Dependency\Client\ConfigurableBundlesRestApiToConfigurableBundleStorageClientInterface $configurableBundleStorageClient
-     * @param \Spryker\Glue\ConfigurableBundlesRestApi\Dependency\Client\ConfigurableBundlesRestApiToConfigurableBundlePageSearchClientInterface $configurableBundlePageSearchClient
-     * @param \Spryker\Glue\ConfigurableBundlesRestApi\Processor\RestResponseBuilder\ConfigurableBundleTemplateRestResponseBuilderInterface $configurableBundleTemplateRestResponseBuilder
-     */
     public function __construct(
         ConfigurableBundlesRestApiToConfigurableBundleStorageClientInterface $configurableBundleStorageClient,
         ConfigurableBundlesRestApiToConfigurableBundlePageSearchClientInterface $configurableBundlePageSearchClient,
@@ -54,12 +49,6 @@ class ConfigurableBundleTemplateReader implements ConfigurableBundleTemplateRead
         $this->configurableBundleTemplateRestResponseBuilder = $configurableBundleTemplateRestResponseBuilder;
     }
 
-    /**
-     * @param string $uuidConfigurableBundleTemplate
-     * @param \Spryker\Glue\GlueApplication\Rest\Request\Data\RestRequestInterface $restRequest
-     *
-     * @return \Spryker\Glue\GlueApplication\Rest\JsonApi\RestResponseInterface
-     */
     public function getConfigurableBundleTemplate(
         string $uuidConfigurableBundleTemplate,
         RestRequestInterface $restRequest
@@ -77,11 +66,6 @@ class ConfigurableBundleTemplateReader implements ConfigurableBundleTemplateRead
             ->buildConfigurableBundleTemplateRestResponse($configurableBundleTemplateStorageTransfer, $localeName);
     }
 
-    /**
-     * @param \Spryker\Glue\GlueApplication\Rest\Request\Data\RestRequestInterface $restRequest
-     *
-     * @return \Spryker\Glue\GlueApplication\Rest\JsonApi\RestResponseInterface
-     */
     public function getConfigurableBundleTemplateCollection(RestRequestInterface $restRequest): RestResponseInterface
     {
         $configurableBundleTemplateIds = $this->getAllConfigurableBundleTemplateIds();
