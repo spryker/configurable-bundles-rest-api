@@ -1,0 +1,26 @@
+resource:
+    name: ConfigurableBundleTemplateImageSets
+    shortName: configurable-bundle-template-image-sets
+    description: 'Image sets belonging to a configurable bundle template'
+
+    paginationEnabled: false
+
+    properties:
+        name:
+            type: string
+            identifier: true
+            writable: false
+            readable: true
+            description: 'Name of the image set (e.g. "default").'
+            openapiContext:
+                example: 'default'
+
+        images:
+            type: array
+            writable: false
+            readable: true
+            description: 'Collection of images in this image set.'
+            openapiContext:
+                example:
+                    - externalUrlLarge: 'https://images.icecat.biz/img/gallery/30375328_7225.jpg'
+                      externalUrlSmall: 'https://images.icecat.biz/img/gallery_mediums/30375328_7225.jpg'

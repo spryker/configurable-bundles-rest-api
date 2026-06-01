@@ -1,0 +1,30 @@
+resource:
+    name: ConfigurableBundleTemplateSlots
+    shortName: configurable-bundle-template-slots
+    description: 'Slots belonging to a configurable bundle template'
+
+    paginationEnabled: false
+
+    properties:
+        idProductList:
+            type: integer
+            writable: false
+            readable: false
+            description: 'Internal context: product list ID used by relationship resolvers to load concrete products.'
+
+        uuid:
+            type: string
+            identifier: true
+            writable: false
+            readable: true
+            description: 'UUID of the configurable bundle template slot.'
+            openapiContext:
+                example: '9626de80-6caa-57a9-a683-2846ec5b6914'
+
+        name:
+            type: string
+            writable: false
+            readable: true
+            description: 'Translated name of the configurable bundle template slot.'
+            openapiContext:
+                example: 'Slot 5'

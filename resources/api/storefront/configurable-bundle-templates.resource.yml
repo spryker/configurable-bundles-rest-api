@@ -1,0 +1,60 @@
+resource:
+    name: ConfigurableBundleTemplates
+    shortName: configurable-bundle-templates
+    description: 'Storefront configurable bundle templates'
+
+    provider: Spryker\Glue\ConfigurableBundlesRestApi\Api\Storefront\Provider\ConfigurableBundleTemplatesStorefrontProvider
+
+    paginationEnabled: false
+
+    operations:
+        - type: Get
+          name: getConfigurableBundleTemplate
+          description: 'Retrieve a configurable bundle template by UUID.'
+          openapiContext:
+              responses:
+                  200:
+                      description: 'Configurable bundle template returned.'
+                  404:
+                      description: 'Configurable bundle template not found.'
+
+        - type: GetCollection
+          name: getConfigurableBundleTemplates
+          description: 'Retrieve a collection of configurable bundle templates.'
+          openapiContext:
+              responses:
+                  200:
+                      description: 'Configurable bundle template collection returned.'
+
+    includes:
+        - relationshipName: configurable-bundle-template-slots
+          targetResource: ConfigurableBundleTemplateSlots
+          resolverClass: Spryker\Glue\ConfigurableBundlesRestApi\Api\Storefront\Relationship\ConfigurableBundleTemplateSlotsRelationshipResolver
+
+        - relationshipName: configurable-bundle-template-image-sets
+          targetResource: ConfigurableBundleTemplateImageSets
+          resolverClass: Spryker\Glue\ConfigurableBundlesRestApi\Api\Storefront\Relationship\ConfigurableBundleTemplateImageSetsRelationshipResolver
+
+    properties:
+        storageData:
+            type: array
+            readable: false
+            writable: false
+            description: 'Internal context: holds the ConfigurableBundleTemplateStorageTransfer for relationship resolvers.'
+
+        uuid:
+            type: string
+            identifier: true
+            writable: false
+            readable: true
+            description: 'UUID of the configurable bundle template.'
+            openapiContext:
+                example: '8d8510d8-59fe-5289-8a65-19f0c35a0089'
+
+        name:
+            type: string
+            writable: false
+            readable: true
+            description: 'Translated name of the configurable bundle template.'
+            openapiContext:
+                example: 'Configurable Bundle "All In"'
