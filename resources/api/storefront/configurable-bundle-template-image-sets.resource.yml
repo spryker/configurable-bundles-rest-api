@@ -2,6 +2,7 @@ resource:
     name: ConfigurableBundleTemplateImageSets
     shortName: configurable-bundle-template-image-sets
     description: 'Image sets belonging to a configurable bundle template'
+    includedSortPriority: 100
 
     paginationEnabled: false
 
