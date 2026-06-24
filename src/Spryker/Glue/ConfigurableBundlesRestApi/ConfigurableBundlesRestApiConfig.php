@@ -12,26 +12,36 @@ use Spryker\Glue\Kernel\AbstractBundleConfig;
 class ConfigurableBundlesRestApiConfig extends AbstractBundleConfig
 {
     /**
+     * @api
+     *
      * @var string
      */
     public const RESOURCE_CONFIGURABLE_BUNDLE_TEMPLATES = 'configurable-bundle-templates';
 
     /**
+     * @api
+     *
      * @var string
      */
     public const RESOURCE_CONFIGURABLE_BUNDLE_TEMPLATE_SLOTS = 'configurable-bundle-template-slots';
 
     /**
+     * @api
+     *
      * @var string
      */
     public const RESOURCE_CONFIGURABLE_BUNDLE_TEMPLATE_IMAGE_SETS = 'configurable-bundle-template-image-sets';
 
     /**
+     * @api
+     *
      * @var string
      */
     public const RESPONSE_CODE_CONFIGURABLE_BUNDLE_TEMPLATE_NOT_FOUND = '3901';
 
     /**
+     * @api
+     *
      * @var string
      */
     public const RESPONSE_DETAIL_CONFIGURABLE_BUNDLE_TEMPLATE_NOT_FOUND = 'Configurable bundle template not found.';
