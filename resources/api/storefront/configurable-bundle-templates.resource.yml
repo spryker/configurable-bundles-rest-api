@@ -11,6 +11,9 @@ resource:
         - type: Get
           name: getConfigurableBundleTemplate
           description: 'Retrieve a configurable bundle template by UUID.'
+          extraProperties:
+              notFoundCode: '3901'
+              notFoundMessage: 'Configurable bundle template not found.'
           openapiContext:
               responses:
                   200:
