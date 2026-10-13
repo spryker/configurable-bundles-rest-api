@@ -8,7 +8,6 @@
 namespace Spryker\Glue\ConfigurableBundlesRestApi\Processor\Mapper;
 
 use Generated\Shared\Transfer\ProductImageSetStorageTransfer;
-use Generated\Shared\Transfer\RestConfigurableBundleImagesAttributesTransfer;
 use Generated\Shared\Transfer\RestConfigurableBundleTemplateImageSetsAttributesTransfer;
 
 class ConfigurableBundleMapper implements ConfigurableBundleMapperInterface
@@ -17,18 +16,9 @@ class ConfigurableBundleMapper implements ConfigurableBundleMapperInterface
         ProductImageSetStorageTransfer $productImageSetStorageTransfer,
         RestConfigurableBundleTemplateImageSetsAttributesTransfer $restConfigurableBundleTemplateImageSetsAttributesTransfer
     ): RestConfigurableBundleTemplateImageSetsAttributesTransfer {
-        $restConfigurableBundleTemplateImageSetsAttributesTransfer->fromArray(
+        return $restConfigurableBundleTemplateImageSetsAttributesTransfer->fromArray(
             $productImageSetStorageTransfer->toArray(),
             true,
         );
-
-        foreach ($productImageSetStorageTransfer->getImages() as $productImageStorageTransfer) {
-            $restConfigurableBundleImagesAttributesTransfer = (new RestConfigurableBundleImagesAttributesTransfer())
-                ->fromArray($productImageStorageTransfer->toArray(), true);
-
-            $restConfigurableBundleTemplateImageSetsAttributesTransfer->addImage($restConfigurableBundleImagesAttributesTransfer);
-        }
-
-        return $restConfigurableBundleTemplateImageSetsAttributesTransfer;
     }
 }
