@@ -1,0 +1,1 @@
+I hereby agree to Spryker's Contribution License Agreement in https://github.com/spryker/configurable-bundles-rest-api/blob/41d7798a28f753accf46fa84c2d0be01a66b5e3b/CONTRIBUTING.md.
