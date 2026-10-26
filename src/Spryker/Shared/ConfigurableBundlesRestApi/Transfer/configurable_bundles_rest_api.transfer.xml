@@ -39,6 +39,7 @@
     <transfer name="ConfigurableBundleTemplateSlotStorage">
         <property name="uuid" type="string" description="A Universally Unique Identifier for an entity."/>
         <property name="name" type="string" description="The name of an entity (e.g., user, category, product, role)."/>
+        <property name="idProductList" type="int"/>
     </transfer>
 
     <transfer name="ProductImageSetStorage">
